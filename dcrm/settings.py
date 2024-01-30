@@ -70,8 +70,8 @@ DATABASES = {
         'NAME': 'Local CRM App I',
         'USER': 'root',
         'PASSWORD': 'crmtest123',
-        'HOST': '127.0.0.1',
-        'PORT': '3307'
+        'HOST': 'localhost',
+        'PORT': '3306'
     }
 }
 
