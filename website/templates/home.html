@@ -5,6 +5,21 @@
 
 {% if user.is_authenticated %}
 <h1>Welcome to Records !</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+
+
+
 {%  if records %}
 
   {%  for record in records %}
