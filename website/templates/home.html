@@ -4,7 +4,6 @@
 
 
 {% if user.is_authenticated %}
-<h1>Welcome to Records !</h1>
 
 <table class="table">
   <thead>
@@ -12,6 +11,7 @@
       <th scope="col">Name</th>
       <th scope="col">Email</th>
       <th scope="col">Phone</th>
+      <th scope="col">Address</th>
       <th scope="col">City</th>
       <th scope="col">State</th>
       <th scope="col">Zipcode</th>
@@ -20,31 +20,27 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
+      {%  if records %}
+
+      {%  for record in records %}
+      <tr>
+        <td>{{ record.first_name }} {{ record.last_name }}</td>
+        <td>{{ record.email }}</td>
+        <td>{{ record.phone }}</td>
+        <td>{{ record.address }}</td>
+        <td>{{ record.city }}</td>
+        <td>{{ record.state }}</td>
+        <td>{{ record.zipcode}}</td>
+        <td>{{ record.created_at }}</td>
+        <td>{{ record.id }}</td>
+        </tr>
+      {% endfor %}
+    
+    {% endif %}
 
 
-
-    </tr>
   </tbody>
 </table>
-
-{%  if records %}
-
-  {%  for record in records %}
-    {{ record.firs_name }}
-    {{ record.last_name }}
-    {{ record.email }}
-    {{ record.phone }}
-    {{ record.address }}
-    {{ record.city }}
-    {{ record.state }}
-    {{ record.zipcode}}
-    {{ record.created_at }}
-    {{ record.id }}    
-    <br/><br/>
-  {% endfor %}
-
-{% endif %}
 
 
 {% else %}
