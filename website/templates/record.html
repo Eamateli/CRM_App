@@ -2,16 +2,25 @@
 
 {% block content %}
 
-<h1> Customer Record:</h1>
+<div class="card">
+    <div class="card-header">
+        {{ customer_record.first_name }} {{ customer_record.last_name }}
+    </div>
+    <div class="card-body">
+      <p class="card-text">
+        <strong></strong>{{ customer_record.email }}<br/>  
+        <strong></strong>{{ customer_record.phone }}<br/>  
+        <strong></strong>{{ customer_record.address }}<br/>  
+        <strong></strong>{{ customer_record.city }}<br/>  
+        <strong></strong>{{ customer_record.state }}<br/>  
+        <strong></strong>{{ customer_record.zipcode}}<br/>  
+        <strong></strong>{{ customer_record.created_at }}<br/>  
+        <strong></strong>{{ customer_record.id }}<br/>  
+      </p>
+    </div>
+  </div>
 
-{{ customer_record.first_name }} {{ customer_record.last_name }}<br/>
-{{ customer_record.email }}<br/>  
-{{ customer_record.phone }}<br/>  
-{{ customer_record.address }}<br/>  
-{{ customer_record.city }}<br/>  
-{{ customer_record.state }}<br/>  
-{{ customer_record.zipcode}}<br/>  
-{{ customer_record.created_at }}<br/>  
-{{ customer_record.id }}<br/>  
+
+
 
 {% endblock %}
