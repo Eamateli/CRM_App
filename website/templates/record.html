@@ -3,8 +3,8 @@
 {% block content %}
 
 <div class="card">
-    <div class="card-header">
-        {{ customer_record.first_name }} {{ customer_record.last_name }}
+    <div class="card-header"><strong>
+        {{ customer_record.first_name }} {{ customer_record.last_name }}</strong>
     </div>
     <div class="card-body">
       <p class="card-text">
@@ -26,8 +26,9 @@
       </p>
     </div>
   </div>
+<br/><br/>
 
-
+<a href="{% url 'home' %}" class="btn btn-secondary">Back</a>
 
 
 {% endblock %}
