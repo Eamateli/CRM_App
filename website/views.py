@@ -71,5 +71,7 @@ def delete_record(request, pk):
             messages.success(request, "You must be Logged In to do that... ")
             return redirect ('home')
             
-    
+def add_record(request):
+    return render(request, 'add_record.html', {})
+     
     
